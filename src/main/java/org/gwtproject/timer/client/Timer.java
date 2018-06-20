@@ -1,5 +1,5 @@
 /*
- * Copyright 2007 Google Inc.
+ * Copyright 2008 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -29,7 +29,7 @@ import elemental2.dom.DomGlobal;
  * <p>
  * <p>
  * NOTE: If you are using a timer to schedule a UI animation, use
- * {@link com.google.gwt.animation.client.AnimationScheduler} instead. The
+ * {@link org.gwtproject.animation.client.AnimationScheduler} instead. The
  * browser can optimize your animation for maximum performance.
  * </p>
  * <p>
