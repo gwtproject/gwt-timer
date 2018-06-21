@@ -29,7 +29,7 @@ new Timer() {
 new Timer() {
     @Override
     public void run() {
-        DomGlobal.console.info("this blcck run once after 1 second");
+        DomGlobal.console.info("this block run once after 1 second");
     }
 }.schedule(1000);
 
