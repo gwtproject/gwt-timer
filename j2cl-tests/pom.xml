@@ -7,24 +7,95 @@
   <version>1.0-SNAPSHOT</version>
 
   <dependencies>
+    <!-- Presently we cannot share these since the j2cl emul for GWTTestCase doesn't support async tests -->
+    <!--<dependency>-->
+      <!--<groupId>org.gwtproject.timer</groupId>-->
+      <!--<artifactId>gwt2-tests</artifactId>-->
+      <!--<version>1.0-SNAPSHOT</version>-->
+      <!--<classifier>tests</classifier>-->
+      <!--<scope>test</scope>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.gwtproject.timer</groupId>-->
+      <!--<artifactId>gwt2-tests</artifactId>-->
+      <!--<version>1.0-SNAPSHOT</version>-->
+      <!--<classifier>test-sources</classifier>-->
+      <!--<scope>test</scope>-->
+    <!--</dependency>-->
+
+
+    <!-- transitive dependencies that aren't correctly available at runtime -->
     <dependency>
-      <groupId>org.gwtproject.timer</groupId>
-      <artifactId>gwt2-tests</artifactId>
-      <version>1.0-SNAPSHOT</version>
-      <classifier>tests</classifier>
+      <groupId>com.google.elemental2</groupId>
+      <artifactId>elemental2-promise</artifactId>
+      <version>1.0.0-RC1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>com.google.elemental2</groupId>
+      <artifactId>elemental2-dom</artifactId>
+      <version>1.0.0-RC1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- As the other projects are gwt2, we need to explicitly depend on a j2cl-compatible version of jsinterop-base -->
+    <dependency>
+      <groupId>com.vertispan.jsinterop</groupId>
+      <artifactId>base</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+
+    <!-- library under test -->
+    <dependency>
       <groupId>org.gwtproject.timer</groupId>
-      <artifactId>gwt2-tests</artifactId>
+      <artifactId>gwt-timer</artifactId>
       <version>1.0-SNAPSHOT</version>
-      <classifier>test-sources</classifier>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- test dependencies -->
+    <dependency>
+      <groupId>com.vertispan.j2cl</groupId>
+      <artifactId>junit-annotations</artifactId>
+      <version>0.3-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.vertispan.j2cl</groupId>
+      <artifactId>gwttestcase-emul</artifactId>
+      <version>0.3-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.vertispan.j2cl</groupId>
+      <artifactId>gwttestcase-emul</artifactId>
+      <version>0.3-SNAPSHOT</version>
+      <classifier>sources</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.vertispan.j2cl</groupId>
+      <artifactId>junit-emul</artifactId>
+      <version>0.3-SNAPSHOT</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.vertispan.j2cl</groupId>
+      <artifactId>junit-emul</artifactId>
+      <version>0.3-SNAPSHOT</version>
+      <classifier>sources</classifier>
       <scope>test</scope>
     </dependency>
   </dependencies>
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>com.vertispan.j2cl</groupId>
         <artifactId>j2cl-maven-plugin</artifactId>
@@ -35,10 +106,9 @@
             <goals>
               <goal>test</goal>
             </goals>
-            <phase>test</phase>
             <configuration>
               <tests>
-                <test>org.gwtproject.timer.TimerSuite</test>
+                <test>org.gwtproject.timer.client.TimerTest</test>
               </tests>
             </configuration>
           </execution>
