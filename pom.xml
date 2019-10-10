@@ -49,6 +49,8 @@
   </modules>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
     <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
   </properties>
 
