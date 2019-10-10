@@ -108,12 +108,6 @@
       <version>${j2cl.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>com.vertispan.j2cl</groupId>
-      <artifactId>junit-emul</artifactId>
-      <version>${j2cl.version}</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
 
   <build>
