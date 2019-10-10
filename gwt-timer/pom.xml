@@ -15,7 +15,6 @@
     <name>The GWT Authors</name>
     <url>https://github.com/gwtproject</url>
   </organization>
-  <inceptionYear>2019</inceptionYear>
 
   <licenses>
     <license>
@@ -37,6 +36,8 @@
     <developerConnection>scm:git:ssh://github.com/gwtproject/gwt-timer.git</developerConnection>
     <url>https://github.com/gwtproject/gwt-timer/tree/master</url>
   </scm>
+
+  <inceptionYear>2019</inceptionYear>
 
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
