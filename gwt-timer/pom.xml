@@ -5,18 +5,17 @@
   <groupId>org.gwtproject.timer</groupId>
   <artifactId>gwt-timer</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>gwt-lib</packaging>
+  <packaging>jar</packaging>
 
   <name>GWT Timer</name>
   <description>A simplified, browser-safe timer class. This class serves the same purpose as java.util.Timer, but is simplified because of the single-threaded
-    environment.
-    To schedule a timer, simply create a subclass of it (overriding run) and call schedule or scheduleRepeating.</description>
+    environment. To schedule a timer, simply create a subclass of it (overriding run) and call schedule or scheduleRepeating.</description>
   <url>https://github.com/gwtproject/gwt-timer</url>
   <organization>
     <name>The GWT Authors</name>
     <url>https://github.com/gwtproject</url>
   </organization>
-  <inceptionYear>2018</inceptionYear>
+  <inceptionYear>2019</inceptionYear>
 
   <licenses>
     <license>
@@ -40,36 +39,57 @@
   </scm>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
-
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
 
-    <gwt.version>2.8.2</gwt.version>
-    <elemental.version>1.0.0-RC1</elemental.version>
+    <maven.compiler.plugin>3.7.0</maven.compiler.plugin>
+    <maven.fmt.plugin>2.5.1</maven.fmt.plugin>
+    <maven.gpg.plugin>1.6</maven.gpg.plugin>
+    <maven.javadoc.plugin>3.1.1</maven.javadoc.plugin>
+    <maven.licence.plugin>3.0</maven.licence.plugin>
+    <maven.source.plugin>3.1.0</maven.source.plugin>
+
+    <elemental2.version>1.0.0-RC1</elemental2.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>com.google.elemental2</groupId>
       <artifactId>elemental2-dom</artifactId>
-      <version>${elemental.version}</version>
+      <version>${elemental2.version}</version>
     </dependency>
     <dependency>
       <groupId>com.google.elemental2</groupId>
       <artifactId>elemental2-dom</artifactId>
-      <version>${elemental.version}</version>
+      <version>${elemental2.version}</version>
       <classifier>sources</classifier>
     </dependency>
   </dependencies>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/timer/**</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/timer/**</include>
+          <include>**/*.gwt.xml</include>
+          <include>**/*.html</include>
+          <include>**/public/**</include>
+        </includes>
+      </resource>
+    </resources>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.5.1</version>
+        <version>${maven.compiler.plugin}</version>
         <configuration>
           <source>${maven.compiler.source}</source>
           <target>${maven.compiler.target}</target>
@@ -78,7 +98,7 @@
       <plugin>
         <groupId>com.coveo</groupId>
         <artifactId>fmt-maven-plugin</artifactId>
-        <version>2.5.1</version>
+        <version>${maven.fmt.plugin}</version>
         <executions>
           <execution>
             <goals>
@@ -90,7 +110,7 @@
       <plugin>
         <groupId>com.mycila</groupId>
         <artifactId>license-maven-plugin</artifactId>
-        <version>3.0</version>
+        <version>${maven.licence.plugin}</version>
         <configuration>
           <header>LICENSE.header</header>
           <encoding>UTF-8</encoding>
@@ -120,18 +140,6 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>net.ltgt.gwt.maven</groupId>
-        <artifactId>gwt-maven-plugin</artifactId>
-        <version>1.0-rc-10</version>
-        <extensions>true</extensions>
-        <configuration>
-          <moduleName>org.gwtproject.timer.Timer</moduleName>
-          <moduleShortName>timer</moduleShortName>
-          <sourceLevel>${maven.compiler.source}</sourceLevel>
-          <failOnError>true</failOnError>
-        </configuration>
-      </plugin>
     </plugins>
   </build>
 
@@ -155,7 +163,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-source-plugin</artifactId>
-            <version>2.2.1</version>
+            <version>${maven.source.plugin}</version>
             <executions>
               <execution>
                 <id>attach-sources</id>
@@ -168,7 +176,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
-            <version>2.9.1</version>
+            <version>${maven.javadoc.plugin}</version>
             <executions>
               <execution>
                 <id>attach-javadocs</id>
@@ -182,7 +190,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.5</version>
+            <version>${maven.gpg.plugin}</version>
             <executions>
               <execution>
                 <id>sign-artifacts</id>

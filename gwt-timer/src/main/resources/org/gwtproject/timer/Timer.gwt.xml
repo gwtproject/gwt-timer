@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module rename-to="timer">
+
+  <!-- Other module inherits                                      -->
   <inherits name="elemental2.dom.Dom"/>
+
+  <!-- sources -->
   <source path="client"/>
 </module>

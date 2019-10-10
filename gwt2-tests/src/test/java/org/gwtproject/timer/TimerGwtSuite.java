@@ -15,10 +15,10 @@
  */
 package org.gwtproject.timer;
 
-import org.gwtproject.timer.client.TimerTest;
+import org.gwtproject.timer.client.TimerGwtTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({TimerTest.class})
-public class TimerSuite {}
+@Suite.SuiteClasses({TimerGwtTest.class})
+public class TimerGwtSuite {}

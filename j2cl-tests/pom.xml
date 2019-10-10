@@ -6,35 +6,65 @@
   <artifactId>j2cl-tests</artifactId>
   <version>1.0-SNAPSHOT</version>
 
+  <name>GWT Timer J2CL Tests</name>
+  <description>Test cases for the J2Cl tests</description>
+  <url>https://github.com/gwtproject/gwt-timer</url>
+
+  <organization>
+    <name>The GWT Authors</name>
+    <url>https://github.com/gwtproject</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>The GWT Authors</name>
+      <organization>The GWT Project Authors</organization>
+      <url>https://github.com/gwtproject</url>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/gwtproject/gwt-timer.git</connection>
+    <developerConnection>scm:git:ssh://github.com/gwtproject/gwt-timer.git</developerConnection>
+    <url>https://github.com/gwtproject/gwt-timer/tree/master</url>
+  </scm>
+
+  <properties>
+    <project.build.encoding>UTF-8</project.build.encoding>
+
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <maven.compiler.plugin>3.7.0</maven.compiler.plugin>
+    <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
+    <maven.fmt.plugin>2.5.1</maven.fmt.plugin>
+    <maven.j2cl.plugin>0.8-SNAPSHOT</maven.j2cl.plugin>
+    <maven.licence.plugin>3.0</maven.licence.plugin>
+
+    <elemental2.version>1.0.0-RC1</elemental2.version>
+    <jsinterop.base.version>1.0.0-SNAPSHOT</jsinterop.base.version>
+    <j2cl.version>0.3-SNAPSHOT</j2cl.version>
+  </properties>
+
   <dependencies>
-    <!-- Presently we cannot share these since the j2cl emul for GWTTestCase doesn't support async tests -->
-    <!--<dependency>-->
-      <!--<groupId>org.gwtproject.timer</groupId>-->
-      <!--<artifactId>gwt2-tests</artifactId>-->
-      <!--<version>1.0-SNAPSHOT</version>-->
-      <!--<classifier>tests</classifier>-->
-      <!--<scope>test</scope>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>org.gwtproject.timer</groupId>-->
-      <!--<artifactId>gwt2-tests</artifactId>-->
-      <!--<version>1.0-SNAPSHOT</version>-->
-      <!--<classifier>test-sources</classifier>-->
-      <!--<scope>test</scope>-->
-    <!--</dependency>-->
-
-
     <!-- transitive dependencies that aren't correctly available at runtime -->
     <dependency>
       <groupId>com.google.elemental2</groupId>
       <artifactId>elemental2-promise</artifactId>
-      <version>1.0.0-RC1</version>
+      <version>${elemental2.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.google.elemental2</groupId>
       <artifactId>elemental2-dom</artifactId>
-      <version>1.0.0-RC1</version>
+      <version>${elemental2.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -42,7 +72,7 @@
     <dependency>
       <groupId>com.vertispan.jsinterop</groupId>
       <artifactId>base</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>${jsinterop.base.version}</version>
     </dependency>
 
     <!-- library under test -->
@@ -57,30 +87,29 @@
     <dependency>
       <groupId>com.vertispan.j2cl</groupId>
       <artifactId>junit-annotations</artifactId>
-      <version>0.3-SNAPSHOT</version>
+      <version>${j2cl.version}</version>
     </dependency>
     <dependency>
       <groupId>com.vertispan.j2cl</groupId>
       <artifactId>gwttestcase-emul</artifactId>
-      <version>0.3-SNAPSHOT</version>
+      <version>${j2cl.version}</version>
     </dependency>
     <dependency>
       <groupId>com.vertispan.j2cl</groupId>
       <artifactId>gwttestcase-emul</artifactId>
-      <version>0.3-SNAPSHOT</version>
+      <version>${j2cl.version}</version>
       <classifier>sources</classifier>
     </dependency>
     <dependency>
       <groupId>com.vertispan.j2cl</groupId>
       <artifactId>junit-emul</artifactId>
-      <version>0.3-SNAPSHOT</version>
+      <version>${j2cl.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.vertispan.j2cl</groupId>
       <artifactId>junit-emul</artifactId>
-      <version>0.3-SNAPSHOT</version>
-      <classifier>sources</classifier>
+      <version>${j2cl.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -90,16 +119,16 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
+        <version>${maven.compiler.plugin}</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
         </configuration>
       </plugin>
       <plugin>
         <groupId>com.vertispan.j2cl</groupId>
         <artifactId>j2cl-maven-plugin</artifactId>
-        <version>0.8-SNAPSHOT</version>
+        <version>${maven.j2cl.plugin}</version>
         <executions>
           <execution>
             <id>test</id>
@@ -114,13 +143,54 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>com.coveo</groupId>
+        <artifactId>fmt-maven-plugin</artifactId>
+        <version>${maven.fmt.plugin}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.mycila</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <version>${maven.licence.plugin}</version>
+        <configuration>
+          <header>LICENSE.header</header>
+          <encoding>${project.build.encoding}</encoding>
+          <skipExistingHeaders>true</skipExistingHeaders>
+          <mapping>
+            <java>SLASHSTAR_STYLE</java>
+          </mapping>
+          <excludes>
+            <exclude>**/*.xml</exclude>
+            <exclude>src/test/resources/**</exclude>
+            <exclude>src/main/resources/**</exclude>
+          </excludes>
+          <properties>
+            <year>${project.inceptionYear}</year>
+            <name>${project.organization.name}</name>
+          </properties>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
     <pluginManagement>
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.0.0-M1</version>
+          <version>${maven.deploy.plugin}</version>
           <configuration>
             <skip>true</skip>
           </configuration>

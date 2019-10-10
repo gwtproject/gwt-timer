@@ -17,10 +17,10 @@ package org.gwtproject.timer.client;
 
 import com.google.gwt.junit.client.GWTTestCase;
 
-public class TimerTest extends GWTTestCase {
+public class TimerGwtTest extends GWTTestCase {
   @Override
   public String getModuleName() {
-    return "org.gwtproject.timer.Timer";
+    return "org.gwtproject.timer.TimerGwt2Test";
   }
 
   public void testTimerSchedule() {

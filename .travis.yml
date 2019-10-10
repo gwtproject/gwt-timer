@@ -1,3 +1,20 @@
+dist: trusty
+
 language: java
-jdk: openjdk8
-script: mvn clean install
+
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+
+jdk:
+  - oraclejdk8
+  - openjdk8
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - "$HOME/.m2"
