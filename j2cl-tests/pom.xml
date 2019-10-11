@@ -174,22 +174,11 @@
         <version>${maven.j2cl.plugin}</version>
         <executions>
           <execution>
-            <id>build-js</id>
-            <phase>process-classes</phase>
-            <goals>
-              <goal>build</goal>
-            </goals>
-            <configuration>
-              <entrypoint>org.gwtproject.timer.client.J2clTestEntryPointDummy</entrypoint>
-              <compilationLevel>BUNDLE</compilationLevel>
-            </configuration>
-          </execution>
-          <execution>
             <id>j2cl-test</id>
             <goals>
               <goal>test</goal>
             </goals>
-            <phase>test</phase>
+<!--            <phase>test</phase>-->
             <configuration>
               <defines>
                 <gwt.enableDebugId>true</gwt.enableDebugId>
