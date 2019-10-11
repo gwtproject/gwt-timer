@@ -50,9 +50,14 @@
     <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
     <maven.fmt.plugin>2.5.1</maven.fmt.plugin>
     <maven.gwt.plugin>1.0-rc-10</maven.gwt.plugin>
+    <maven.install.plugin>3.0.0-M1</maven.install.plugin>
     <maven.jar.plugin>3.1.2</maven.jar.plugin>
     <maven.licence.plugin>3.0</maven.licence.plugin>
     <maven.source.plugin>3.1.0</maven.source.plugin>
+
+    <!-- CI -->
+    <vertispan.j2cl.repo.url>https://repo.vertispan.com/j2cl/</vertispan.j2cl.repo.url>
+    <google.snapshot.repo.url>https://oss.sonatype.org/content/repositories/google-snapshots/</google.snapshot.repo.url>
 
     <gwt.version>2.8.2</gwt.version>
     <junit.version>4.12</junit.version>
@@ -96,6 +101,7 @@
           <target>${maven.compiler.target}</target>
         </configuration>
       </plugin>
+
       <plugin>
         <groupId>net.ltgt.gwt.maven</groupId>
         <artifactId>gwt-maven-plugin</artifactId>
@@ -107,30 +113,7 @@
           <moduleName>org.gwtproject.timer.TimerGwt2Test</moduleName>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>${maven.jar.plugin}</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>test-jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>${maven.source.plugin}</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>test-jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+
       <plugin>
         <groupId>com.coveo</groupId>
         <artifactId>fmt-maven-plugin</artifactId>
@@ -143,6 +126,7 @@
           </execution>
         </executions>
       </plugin>
+
       <plugin>
         <groupId>com.mycila</groupId>
         <artifactId>license-maven-plugin</artifactId>
@@ -173,8 +157,35 @@
           </execution>
         </executions>
       </plugin>
+
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>${maven.jar.plugin}</version>
+      <executions>
+        <execution>
+          <id>default-jar</id>
+          <phase>none</phase>
+          <configuration>
+            <finalName>unwanted</finalName>
+            <classifier>unwanted</classifier>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-install-plugin</artifactId>
+      <version>${maven.install.plugin}</version>
+      <configuration>
+        <skip>true</skip>
+      </configuration>
+    </plugin>
     </plugins>
-    <pluginManagement>
+
+
+  <pluginManagement>
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -192,7 +203,7 @@
     <pluginRepository>
       <id>vertispan-releases</id>
       <name>Vertispan hosted artifacts-releases</name>
-      <url>https://repo.vertispan.com/j2cl</url>
+      <url>${vertispan.j2cl.repo.url}</url>
     </pluginRepository>
   </pluginRepositories>
 
@@ -200,12 +211,12 @@
     <repository>
       <id>vertispan-releases</id>
       <name>Vertispan hosted artifacts-releases</name>
-      <url>https://repo.vertispan.com/j2cl</url>
+      <url>${vertispan.j2cl.repo.url}</url>
     </repository>
     <snapshotRepository>
       <id>vertispan-snapshots</id>
       <name>Vertispan hosted artifacts-snapshots</name>
-      <url>https://repo.vertispan.com/j2cl</url>
+      <url>${vertispan.j2cl.repo.url}</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
