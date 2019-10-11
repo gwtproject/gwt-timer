@@ -53,6 +53,7 @@
     <maven.jar.plugin>3.1.2</maven.jar.plugin>
     <maven.j2cl.plugin>0.8-SNAPSHOT</maven.j2cl.plugin>
     <maven.licence.plugin>3.0</maven.licence.plugin>
+    <maven.surfire.plugin>3.0.0-M1</maven.surfire.plugin>
 
     <!-- CI -->
     <vertispan.j2cl.repo.url>https://repo.vertispan.com/j2cl/</vertispan.j2cl.repo.url>
@@ -246,6 +247,15 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven.surfire.plugin}</version>
+        <configuration>
+          <skipTests>true</skipTests>
+        </configuration>
       </plugin>
 
       <plugin>
