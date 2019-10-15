@@ -52,9 +52,24 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
+    <maven.fmt.plugin>2.5.1</maven.fmt.plugin>
   </properties>
 
   <build>
+    <plugins>
+      <plugin>
+        <groupId>com.coveo</groupId>
+        <artifactId>fmt-maven-plugin</artifactId>
+        <version>${maven.fmt.plugin}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
     <pluginManagement>
       <plugins>
         <plugin>

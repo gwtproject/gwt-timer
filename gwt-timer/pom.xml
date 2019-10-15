@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.gwtproject.timer</groupId>
@@ -8,8 +10,11 @@
   <packaging>jar</packaging>
 
   <name>GWT Timer</name>
-  <description>A simplified, browser-safe timer class. This class serves the same purpose as java.util.Timer, but is simplified because of the single-threaded
-    environment. To schedule a timer, simply create a subclass of it (overriding run) and call schedule or scheduleRepeating.</description>
+  <description>A simplified, browser-safe timer class. This class serves the same purpose as
+    java.util.Timer, but is simplified because of the single-threaded
+    environment. To schedule a timer, simply create a subclass of it (overriding run) and call
+    schedule or scheduleRepeating.
+  </description>
   <url>https://github.com/gwtproject/gwt-timer</url>
   <organization>
     <name>The GWT Authors</name>
@@ -99,18 +104,7 @@
           <target>${maven.compiler.target}</target>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>com.coveo</groupId>
-        <artifactId>fmt-maven-plugin</artifactId>
-        <version>${maven.fmt.plugin}</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+
       <plugin>
         <groupId>com.mycila</groupId>
         <artifactId>license-maven-plugin</artifactId>
