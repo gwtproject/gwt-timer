@@ -48,7 +48,6 @@
 
     <maven.compiler.plugin>3.7.0</maven.compiler.plugin>
     <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
-    <maven.fmt.plugin>2.5.1</maven.fmt.plugin>
     <maven.gwt.plugin>1.0-rc-10</maven.gwt.plugin>
     <maven.install.plugin>3.0.0-M1</maven.install.plugin>
     <maven.jar.plugin>3.1.2</maven.jar.plugin>
@@ -112,19 +111,6 @@
           <failOnError>true</failOnError>
           <moduleName>org.gwtproject.timer.TimerGwt2Test</moduleName>
         </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>com.coveo</groupId>
-        <artifactId>fmt-maven-plugin</artifactId>
-        <version>${maven.fmt.plugin}</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
 
       <plugin>
