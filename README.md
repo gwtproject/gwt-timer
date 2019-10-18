@@ -1,9 +1,7 @@
 ![GWT3/J2CL compatible](https://img.shields.io/badge/GWT3/J2CL-compatible-brightgreen.svg)
 
 # gwt-timer
-A simplified, browser-safe timer class. This class serves the same purpose as java.util.Timer, but is simplified because of the single-threaded
-    environment.
-    To schedule a timer, simply create a subclass of it (overriding run) and call schedule or scheduleRepeating.
+A simplified, browser-safe timer class. This class serves the same purpose as java.util.Timer, but is simplified because of the single-threaded environment. To schedule a timer, simply create a subclass of it (overriding run) and call schedule or scheduleRepeating.
 
 ### Dependency
 
