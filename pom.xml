@@ -44,8 +44,8 @@
 
   <modules>
     <module>gwt-timer</module>
-    <module>gwt2-tests</module>
-    <module>j2cl-tests</module>
+    <module>gwt-timer-gwt2-tests</module>
+    <module>gwt-timer-j2cl-tests</module>
   </modules>
 
   <properties>
