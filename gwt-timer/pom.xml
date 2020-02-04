@@ -43,7 +43,7 @@
     <url>https://github.com/gwtproject/gwt-timer/tree/master</url>
   </scm>
 
-  <inceptionYear>2020</inceptionYear>
+  <inceptionYear>2019</inceptionYear>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

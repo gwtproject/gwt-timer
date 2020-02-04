@@ -40,7 +40,7 @@
     <url>https://github.com/gwtproject/gwt-timer/tree/master</url>
   </scm>
 
-  <inceptionYear>2020</inceptionYear>
+  <inceptionYear>2019</inceptionYear>
 
   <modules>
     <module>gwt-timer</module>
