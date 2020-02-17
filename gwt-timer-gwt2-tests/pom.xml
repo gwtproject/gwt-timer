@@ -76,7 +76,7 @@
         <extensions>true</extensions>
         <configuration>
           <failOnError>true</failOnError>
-          <moduleName>org.gwtproject.geolocation.GeolocationSuite</moduleName>
+          <moduleName>org.gwtproject.timer.TimerGwtSuite</moduleName>
         </configuration>
       </plugin>
       <plugin>
