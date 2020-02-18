@@ -25,7 +25,7 @@
     <maven.findbugs.plugin>3.0.5</maven.findbugs.plugin>
     <maven.install.plugin>3.0.0-M1</maven.install.plugin>
     <maven.jar.plugin>3.1.2</maven.jar.plugin>
-    <maven.j2cl.plugin>0.12-SNAPSHOT</maven.j2cl.plugin>
+    <maven.j2cl.plugin>0.13-SNAPSHOT</maven.j2cl.plugin>
     <maven.licence.plugin>3.0</maven.licence.plugin>
     <maven.surfire.plugin>3.0.0-M1</maven.surfire.plugin>
 
