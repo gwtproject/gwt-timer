@@ -35,7 +35,7 @@
 
     <elemental2.version>1.0.0-RC1</elemental2.version>
     <jsinterop.base.version>1.0.0-SNAPSHOT</jsinterop.base.version>
-    <j2cl.version>0.6-SNAPSHOT</j2cl.version>
+    <j2cl.version>0.7-SNAPSHOT</j2cl.version>
     <slf4j.version>1.7.5</slf4j.version>
   </properties>
 
