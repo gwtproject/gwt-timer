@@ -118,7 +118,7 @@
                 <gwt.cspCompatModeEnabled>true</gwt.cspCompatModeEnabled>
                 <gwt.strictCspTestingEnabled>true</gwt.strictCspTestingEnabled>
               </defines>
-              <compilationLevel>BUNDLE</compilationLevel>
+              <compilationLevel>ADVANCED</compilationLevel>
               <tests>
                 <test>org.gwtproject.timer.client.TimerJc2lTest</test>
               </tests>

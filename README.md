@@ -5,7 +5,7 @@ A simplified, browser-safe timer class. This class serves the same purpose as ja
 
 ### Dependency
 
-```
+```xml
 <dependency>
     <groupId>org.gwtproject.timer</groupId>
     <artifactId>gwt-timer</artifactId>
