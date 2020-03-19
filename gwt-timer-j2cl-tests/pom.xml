@@ -20,23 +20,15 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
 
-    <maven.compiler.plugin>3.7.0</maven.compiler.plugin>
-    <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
-    <maven.findbugs.plugin>3.0.5</maven.findbugs.plugin>
-    <maven.install.plugin>3.0.0-M1</maven.install.plugin>
-    <maven.jar.plugin>3.1.2</maven.jar.plugin>
     <maven.j2cl.plugin>0.13-SNAPSHOT</maven.j2cl.plugin>
     <maven.licence.plugin>3.0</maven.licence.plugin>
     <maven.surfire.plugin>3.0.0-M1</maven.surfire.plugin>
 
     <!-- CI -->
     <vertispan.j2cl.repo.url>https://repo.vertispan.com/j2cl/</vertispan.j2cl.repo.url>
-    <google.snapshot.repo.url>https://oss.sonatype.org/content/repositories/google-snapshots/</google.snapshot.repo.url>
 
     <elemental2.version>1.0.0-RC1</elemental2.version>
-    <jsinterop.base.version>1.0.0-SNAPSHOT</jsinterop.base.version>
     <j2cl.version>0.7-SNAPSHOT</j2cl.version>
-    <slf4j.version>1.7.5</slf4j.version>
   </properties>
 
   <dependencies>
@@ -54,30 +46,10 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- As the other projects are gwt2, we need to explicitly depend on a j2cl-compatible version of jsinterop-base -->
-    <dependency>
-      <groupId>com.vertispan.jsinterop</groupId>
-      <artifactId>base</artifactId>
-      <version>${jsinterop.base.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>${slf4j.version}</version>
-      <scope>test</scope>
-    </dependency>
-
     <!-- test dependencies -->
     <dependency>
       <groupId>com.vertispan.j2cl</groupId>
       <artifactId>junit-annotations</artifactId>
-      <version>${j2cl.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.vertispan.j2cl</groupId>
-      <artifactId>gwttestcase-emul</artifactId>
       <version>${j2cl.version}</version>
       <scope>test</scope>
     </dependency>
@@ -115,16 +87,6 @@
             <goals>
               <goal>test</goal>
             </goals>
-            <configuration>
-              <defines>
-                <gwt.enableDebugId>true</gwt.enableDebugId>
-                <gwt.cspCompatModeEnabled>true</gwt.cspCompatModeEnabled>
-                <gwt.strictCspTestingEnabled>true</gwt.strictCspTestingEnabled>
-              </defines>
-              <tests>
-                <test>org.gwtproject.timer.client.TimerJc2lTest</test>
-              </tests>
-            </configuration>
           </execution>
         </executions>
       </plugin>
@@ -143,16 +105,6 @@
     <repository>
       <id>${vertispan.j2cl.repo.id}</id>
       <name>${vertispan.j2cl.repo.name}</name>
-      <url>${vertispan.j2cl.repo.url}</url>
-    </repository>
-    <repository>
-      <id>vertispan-releases</id>
-      <name>Vertispan hosted artifacts-releases</name>
-      <url>${vertispan.j2cl.repo.url}</url>
-    </repository>
-    <repository>
-      <id>vertispan-snapshots</id>
-      <name>Vertispan hosted artifacts-snapshots</name>
       <url>${vertispan.j2cl.repo.url}</url>
     </repository>
   </repositories>
