@@ -44,7 +44,7 @@ new Timer() {
 ### Instructions
 To build gwt-timer:
 * run `mvn clean install`
-on the oarent directory.
+on the parent directory.
 
 To run the j2cl tests:
 * switch to the 'gwt-timer-j2cl-tests' directory
