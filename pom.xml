@@ -11,7 +11,7 @@
   <packaging>pom</packaging>
 
   <name>GWT Timer Parent</name>
-  <description>Parent POM containing the gwtimer module and the test modules (gwt2-tests and j2cl-tests)</description>
+  <description>Parent POM containing the gwt-timer module and the test modules (gwt2-tests and j2cl-tests)</description>
   <url>https://github.com/gwtproject/gwt-timer</url>
 
   <organization>
