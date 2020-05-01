@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.gwtproject.timer</groupId>
     <artifactId>gwt-timer-parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-RC-1</version>
   </parent>
   <artifactId>gwt-timer-gwt2-tests</artifactId>
   <packaging>gwt-lib</packaging>

@@ -17,7 +17,7 @@ All modules can be used on client-side, server-side, or Android.
    <dependency>
      <groupId>org.gwtproject.timer</groupId>
      <artifactId>gwt-timer</artifactId>
-     <version>1.0.0-rc-1</version>
+     <version>1.0.0-RC-1</version>
    </dependency>
    ```
 
