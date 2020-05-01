@@ -55,7 +55,7 @@ To run the j2cl tests:
 
 ## System Requirements
 
-**GWT Timer requires GWT 2.9.0 or greater!**
+**GWT Timer requires GWT 2.9.0 or newer!**
 
 
 ## Samples
