@@ -53,7 +53,7 @@
 
     <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
     <maven.fmt.plugin>2.9</maven.fmt.plugin>
-    <maven.licence.plugin>3.0</maven.licence.plugin>
+    <maven.license.plugin>3.0</maven.license.plugin>
   </properties>
 
   <dependencies>
@@ -93,7 +93,7 @@
         <plugin>
           <groupId>com.mycila</groupId>
           <artifactId>license-maven-plugin</artifactId>
-          <version>${maven.licence.plugin}</version>
+          <version>${maven.license.plugin}</version>
           <configuration>
             <header>LICENSE.header</header>
             <encoding>${project.build.sourceEncoding}</encoding>

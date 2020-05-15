@@ -20,14 +20,16 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
 
+    <maven.compiler.plugin>3.8.1</maven.compiler.plugin>
     <maven.gwt.plugin>1.0.0</maven.gwt.plugin>
+    <maven.license.plugin>3.0</maven.license.plugin>
 
     <!-- CI -->
     <vertispan.j2cl.repo.url>https://repo.vertispan.com/j2cl/</vertispan.j2cl.repo.url>
     <google.snapshot.repo.url>https://oss.sonatype.org/content/repositories/google-snapshots/</google.snapshot.repo.url>
 
     <elemental2.version>1.0.0</elemental2.version>
-    <gwt.version>2.9.0-RC1</gwt.version>
+    <gwt.version>2.9.0</gwt.version>
     <junit.version>4.12</junit.version>
   </properties>
 
@@ -82,6 +84,16 @@
       <plugin>
         <groupId>com.mycila</groupId>
         <artifactId>license-maven-plugin</artifactId>
+        <version>${maven.license.plugin}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven.compiler.plugin}</version>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
       </plugin>
     </plugins>
   </build>

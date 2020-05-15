@@ -21,7 +21,6 @@
     <maven.compiler.target>1.8</maven.compiler.target>
 
     <maven.j2cl.plugin>0.13-SNAPSHOT</maven.j2cl.plugin>
-    <maven.licence.plugin>3.0</maven.licence.plugin>
     <maven.surfire.plugin>3.0.0-M1</maven.surfire.plugin>
 
     <!-- CI -->
@@ -73,6 +72,7 @@
       <plugin>
         <groupId>com.mycila</groupId>
         <artifactId>license-maven-plugin</artifactId>
+        <version>${maven.license.plugin}</version>
       </plugin>
       <plugin>
         <groupId>com.vertispan.j2cl</groupId>
@@ -80,6 +80,7 @@
         <version>${maven.j2cl.plugin}</version>
         <configuration>
           <compilationLevel>ADVANCED</compilationLevel>
+          <testJsZip>com.vertispan.j2cl:closure-test:zip:jszip:0.7-20200424.004055-5</testJsZip>
         </configuration>
         <executions>
           <execution>
