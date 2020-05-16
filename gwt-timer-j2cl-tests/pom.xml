@@ -85,7 +85,7 @@
         <executions>
           <execution>
             <id>j2cl-test</id>
-            <phase>integration-test</phase>
+            <phase>test</phase>
             <goals>
               <goal>test</goal>
             </goals>
