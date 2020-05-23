@@ -17,14 +17,14 @@ All modules can be used on client-side, server-side, or Android.
    <dependency>
      <groupId>org.gwtproject.timer</groupId>
      <artifactId>gwt-timer</artifactId>
-     <version>1.0.0-RC-1</version>
+     <version>1.0.0-RC1</version>
    </dependency>
    ```
 
    For Gradle:
 
    ```gradle
-   implementation("org.gwtproject.timer:gwt-timer:1.0.0-RC-1")
+   implementation("org.gwtproject.timer:gwt-timer:1.0.0-RC1")
    ```
 
 2. Update your GWT module to use
@@ -57,6 +57,10 @@ To run the j2cl tests:
 
 **GWT Timer requires GWT 2.9.0 or newer!**
 
+
+## Dependencies
+
+GWT Timer does not depend on any other module.
 
 ## Samples
 A simplified, browser-safe timer class. This class serves the same purpose as `java.util.Timer` ,  but is simplified because of the single-threaded environment. To schedule a timer, simply create a subclass of it (overriding run) and call schedule or scheduleRepeating.
