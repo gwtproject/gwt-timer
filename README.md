@@ -1,10 +1,10 @@
 # GWT Timer
 
+![GWT3/J2CL compatible](https://img.shields.io/badge/GWT3/J2CL-compatible-brightgreen.svg)
+
 A future-proof port of the `com.google.gwt.user.client.Timer` GWT module, with no dependency on `gwt-user` (besides the Java Runtime Emulation), to prepare for GWT 3 / J2Cl.
 
 All modules can be used on client-side, server-side, or Android.
-
-![GWT3/J2CL compatible](https://img.shields.io/badge/GWT3/J2CL-compatible-brightgreen.svg)
 
 ##  Migrating from `com.google.gwt.user.client.Timer`
 
