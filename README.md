@@ -14,14 +14,14 @@ A future-proof port of the `com.google.gwt.user.client.Timer` GWT module, with n
    <dependency>
      <groupId>org.gwtproject.timer</groupId>
      <artifactId>gwt-timer</artifactId>
-     <version>1.0.0-RC-1</version>
+     <version>1.0.0-RC1</version>
    </dependency>
    ```
 
    For Gradle:
 
    ```gradle
-   implementation("org.gwtproject.timer:gwt-timer:1.0.0-RC-1")
+   implementation("org.gwtproject.timer:gwt-timer:1.0.0-RC1")
    ```
 
 2. Update your GWT module to use
