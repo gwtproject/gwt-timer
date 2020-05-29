@@ -102,7 +102,7 @@
               <java>SLASHSTAR_STYLE</java>
             </mapping>
             <includes>
-              <include>sec/test/java</include>
+              <include>src/test/java</include>
             </includes>
             <properties>
               <year>${project.inceptionYear}</year>
