@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.gwtproject.timer</groupId>
     <artifactId>gwt-timer-parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>HEAD-SNAPSHOT</version>
   </parent>
   <artifactId>gwt-timer-j2cl-tests</artifactId>
 
@@ -20,14 +20,13 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
 
-    <maven.j2cl.plugin>0.13-SNAPSHOT</maven.j2cl.plugin>
-    <maven.licence.plugin>3.0</maven.licence.plugin>
+    <maven.j2cl.plugin>0.14-SNAPSHOT</maven.j2cl.plugin>
     <maven.surfire.plugin>3.0.0-M1</maven.surfire.plugin>
 
     <!-- CI -->
     <vertispan.j2cl.repo.url>https://repo.vertispan.com/j2cl/</vertispan.j2cl.repo.url>
 
-    <elemental2.version>1.0.0-RC1</elemental2.version>
+    <elemental2.version>1.0.0</elemental2.version>
     <j2cl.version>0.7-SNAPSHOT</j2cl.version>
   </properties>
 
@@ -73,6 +72,7 @@
       <plugin>
         <groupId>com.mycila</groupId>
         <artifactId>license-maven-plugin</artifactId>
+        <version>${maven.license.plugin}</version>
       </plugin>
       <plugin>
         <groupId>com.vertispan.j2cl</groupId>
@@ -80,10 +80,12 @@
         <version>${maven.j2cl.plugin}</version>
         <configuration>
           <compilationLevel>ADVANCED</compilationLevel>
+          <testJsZip>com.vertispan.j2cl:closure-test:zip:jszip:0.7-20200424.004055-5</testJsZip>
         </configuration>
         <executions>
           <execution>
             <id>j2cl-test</id>
+            <phase>test</phase>
             <goals>
               <goal>test</goal>
             </goals>
@@ -96,6 +98,22 @@
         <version>${maven.surfire.plugin}</version>
         <configuration>
           <skipTests>true</skipTests>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>${maven.install.plugin}</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>${maven.deploy.plugin}</version>
+        <configuration>
+          <skip>true</skip>
         </configuration>
       </plugin>
     </plugins>

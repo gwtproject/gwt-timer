@@ -24,8 +24,9 @@ import elemental2.dom.DomGlobal;
  * <p>To schedule a timer, simply create a subclass of it (overriding {@link #run}) and call {@link
  * #schedule} or {@link #scheduleRepeating}.
  *
- * <p>NOTE: If you are using a timer to schedule a UI animation, use {@link
- * org.gwtproject.animation.client.AnimationScheduler} or {@link DomGlobal#requestAnimationFrame}
+ * <p>NOTE: If you are using a timer to schedule a UI animation, use
+ * <b>org.gwtproject.animation.client.AnimationScheduler</b> or
+ * <b>DomGlobal#requestAnimationFrame</b>
  * instead. The browser can optimize your animation for maximum performance.
  */
 public abstract class Timer {
