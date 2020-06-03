@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.gwtproject.timer</groupId>
     <artifactId>gwt-timer-parent</artifactId>
-    <version>1.0.0-RC1</version>
+    <version>HEAD-SNAPSHOT</version>
   </parent>
   <artifactId>gwt-timer-gwt2-tests</artifactId>
   <packaging>gwt-lib</packaging>
@@ -93,6 +93,22 @@
         <configuration>
           <source>8</source>
           <target>8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>${maven.install.plugin}</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>${maven.deploy.plugin}</version>
+        <configuration>
+          <skip>true</skip>
         </configuration>
       </plugin>
     </plugins>

@@ -23,7 +23,7 @@
 
   <groupId>org.gwtproject.timer</groupId>
   <artifactId>gwt-timer</artifactId>
-  <version>1.0.0-RC1</version>
+  <version>HEAD-SNAPSHOT</version>
   <packaging>gwt-lib</packaging>
 
   <name>GWT Timer</name>
