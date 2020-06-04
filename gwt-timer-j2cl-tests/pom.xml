@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.gwtproject.timer</groupId>
     <artifactId>gwt-timer-parent</artifactId>
-    <version>HEAD-SNAPSHOT</version>
+    <version>${revision}</version>
   </parent>
   <artifactId>gwt-timer-j2cl-tests</artifactId>
 
