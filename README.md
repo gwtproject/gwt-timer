@@ -30,7 +30,7 @@ A future-proof port of the `com.google.gwt.user.client.Timer` GWT module, with n
    <inherits name="org.gwtproject.timer.Timer" />
    ```
 
-3. Change your `import`s in your Java source files:
+3. Change the `import`s in your Java source files:
 
    ```java
    import org.gwtproject.timer.client.Timer;
@@ -49,7 +49,7 @@ To run the j2cl tests:
 * switch to the 'gwt-timer-j2cl-tests' directory
 * run `mvn j2cl:clean` & `mvn j2cl:test`
 
-**Note: To build GWT Timer you need Maven 3.6.2 or newer**
+**Note: To build the module you need Maven 3.6.2 or newer**
 
 ## System Requirements
 
