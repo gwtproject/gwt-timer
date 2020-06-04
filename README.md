@@ -49,6 +49,7 @@ To run the j2cl tests:
 * switch to the 'gwt-timer-j2cl-tests' directory
 * run `mvn j2cl:clean` & `mvn j2cl:test`
 
+**Note: To build GWT Timer you need Maven 3.6.2 or newer**
 
 ## System Requirements
 

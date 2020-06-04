@@ -17,7 +17,6 @@
 
 -->
 <module rename-to="timer">
-
   <!-- Other module inherits                                      -->
   <inherits name="elemental2.dom.Dom"/>
 
