@@ -63,6 +63,8 @@
   <inceptionYear>2019</inceptionYear>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
 
@@ -108,7 +110,7 @@
         <version>${maven.license.plugin}</version>
         <configuration>
           <header>LICENSE.header</header>
-          <encoding>UTF-8</encoding>
+          <encoding>${project.build.sourceEncoding}</encoding>
           <skipExistingHeaders>true</skipExistingHeaders>
           <mapping>
             <java>SLASHSTAR_STYLE</java>
