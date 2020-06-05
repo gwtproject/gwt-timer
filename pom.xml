@@ -56,6 +56,7 @@
 
     <maven.compiler.plugin>3.8.1</maven.compiler.plugin>
     <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
+    <maven.flatten.plugin>1.1.0</maven.flatten.plugin>
     <maven.fmt.plugin>2.9</maven.fmt.plugin>
     <maven.install.plugin>3.0.0-M1</maven.install.plugin>
     <maven.license.plugin>3.0</maven.license.plugin>
@@ -92,6 +93,31 @@
         <configuration>
           <skip>true</skip>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <version>${maven.flatten.plugin}</version>
+        <configuration>
+          <updatePomFile>true</updatePomFile>
+          <flattenMode>resolveCiFriendliesOnly</flattenMode>
+        </configuration>
+        <executions>
+          <execution>
+            <id>flatten</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>flatten</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>flatten.clean</id>
+            <phase>clean</phase>
+            <goals>
+              <goal>clean</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
     <pluginManagement>
