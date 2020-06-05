@@ -228,3 +228,7 @@ war/
 
 # target folder
 */target/*
+/.flattened-pom.xml
+/gwt-timer-gwt2-tests/.flattened-pom.xml
+/gwt-timer-j2cl-tests/.flattened-pom.xml
+/gwt-timer/.flattened-pom.xml
