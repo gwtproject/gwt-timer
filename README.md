@@ -40,14 +40,9 @@ A future-proof port of the `com.google.gwt.user.client.Timer` GWT module, with n
 
 To build gwt-timer:
 
-* run `mvn clean install`
+* run `mvn clean verify`
 
-on the parent directory.
-
-To run the j2cl tests stand-alone:
-
-* switch to the 'gwt-timer-j2cl-tests' directory
-* run `mvn j2cl:clean` & `mvn j2cl:test`
+on the parent directory. This will build the artifact and run tests against the JVM, J2CL, and GWT2.
 
 **Note: To build the module you need Maven 3.6.3 or newer**
 
