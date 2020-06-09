@@ -23,7 +23,7 @@
   <groupId>org.gwtproject.timer</groupId>
   <artifactId>gwt-timer-parent</artifactId>
 
-  <version>${revision}</version>
+  <version>dev</version>
 
   <packaging>pom</packaging>
 
@@ -66,6 +66,8 @@
   </modules>
 
   <properties>
+    <revision>HEAD-SNAPSHOT</revision>
+
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -79,15 +81,6 @@
     <maven.license.plugin>3.0</maven.license.plugin>
     <maven.surfire.plugin>3.0.0-M1</maven.surfire.plugin>
   </properties>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.gwtproject.timer</groupId>
-      <artifactId>gwt-timer</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
 
   <build>
     <plugins>
@@ -138,21 +131,13 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>${maven.deploy.plugin}</version>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
-      </plugin>
-      <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>flatten-maven-plugin</artifactId>
         <version>${maven.flatten.plugin}</version>
-        <configuration>
-          <updatePomFile>true</updatePomFile>
-          <flattenMode>resolveCiFriendliesOnly</flattenMode>
-        </configuration>
+<!--        <configuration>-->
+<!--          <updatePomFile>true</updatePomFile>-->
+<!--          <flattenMode>resolveCiFriendliesOnly</flattenMode>-->
+<!--        </configuration>-->
         <executions>
           <execution>
             <id>flatten</id>
@@ -185,4 +170,14 @@
       </plugins>
     </pluginManagement>
   </build>
+  <dependencyManagement>
+    <dependencies>
+      <!-- Internal dependencies -->
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>gwt-timer</artifactId>
+        <version>${revision}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>

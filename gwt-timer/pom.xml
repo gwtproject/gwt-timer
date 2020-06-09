@@ -21,10 +21,14 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.gwtproject.timer</groupId>
+  <parent>
+    <groupId>org.gwtproject.timer</groupId>
+    <artifactId>gwt-timer-parent</artifactId>
+    <version>dev</version>
+  </parent>
   <artifactId>gwt-timer</artifactId>
-  <version>${revision}</version>
   <packaging>gwt-lib</packaging>
+  <version>${revision}</version>
 
   <name>GWT Timer</name>
   <description>A simplified, browser-safe timer class. This class serves the same purpose as
@@ -68,7 +72,6 @@
 
     <maven.compiler.plugin>3.8.1</maven.compiler.plugin>
     <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
-    <maven.flatten.plugin>1.2.2</maven.flatten.plugin>
     <maven.fmt.plugin>2.9</maven.fmt.plugin>
     <maven.gwt.plugin>1.0.0</maven.gwt.plugin>
     <maven.gpg.plugin>1.6</maven.gpg.plugin>
@@ -135,31 +138,6 @@
           <execution>
             <goals>
               <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>flatten-maven-plugin</artifactId>
-        <version>${maven.flatten.plugin}</version>
-        <configuration>
-          <updatePomFile>true</updatePomFile>
-          <flattenMode>resolveCiFriendliesOnly</flattenMode>
-        </configuration>
-        <executions>
-          <execution>
-            <id>flatten</id>
-            <phase>process-resources</phase>
-            <goals>
-              <goal>flatten</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>flatten.clean</id>
-            <phase>clean</phase>
-            <goals>
-              <goal>clean</goal>
             </goals>
           </execution>
         </executions>

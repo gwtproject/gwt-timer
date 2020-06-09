@@ -23,9 +23,10 @@
   <parent>
     <groupId>org.gwtproject.timer</groupId>
     <artifactId>gwt-timer-parent</artifactId>
-    <version>${revision}</version>
+    <version>dev</version>
   </parent>
   <artifactId>gwt-timer-gwt2-tests</artifactId>
+  <version>${revision}</version>
   <packaging>gwt-lib</packaging>
 
   <name>GWT Timer GWT 2 Tests</name>
@@ -75,6 +76,13 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.gwtproject.timer</groupId>
+      <artifactId>gwt-timer</artifactId>
+      <version>${revision}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

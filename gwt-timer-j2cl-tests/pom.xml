@@ -23,9 +23,10 @@
   <parent>
     <groupId>org.gwtproject.timer</groupId>
     <artifactId>gwt-timer-parent</artifactId>
-    <version>${revision}</version>
+    <version>dev</version>
   </parent>
   <artifactId>gwt-timer-j2cl-tests</artifactId>
+  <version>${revision}</version>
 
   <name>GWT Timer J2CL Tests</name>
   <description>Test cases for the J2Cl tests</description>
@@ -74,6 +75,13 @@
       <groupId>com.vertispan.j2cl</groupId>
       <artifactId>junit-emul</artifactId>
       <version>${j2cl.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.gwtproject.timer</groupId>
+      <artifactId>gwt-timer</artifactId>
+      <version>${revision}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
