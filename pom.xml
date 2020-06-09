@@ -134,10 +134,9 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>flatten-maven-plugin</artifactId>
         <version>${maven.flatten.plugin}</version>
-<!--        <configuration>-->
-<!--          <updatePomFile>true</updatePomFile>-->
-<!--          <flattenMode>resolveCiFriendliesOnly</flattenMode>-->
-<!--        </configuration>-->
+        <configuration>
+          <flattenMode>oss</flattenMode>
+        </configuration>
         <executions>
           <execution>
             <id>flatten</id>
