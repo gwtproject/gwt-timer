@@ -35,10 +35,6 @@
   <properties>
     <maven.gwt.plugin>1.0.0</maven.gwt.plugin>
 
-    <!-- CI -->
-    <vertispan.j2cl.repo.url>https://repo.vertispan.com/j2cl/</vertispan.j2cl.repo.url>
-    <google.snapshot.repo.url>https://oss.sonatype.org/content/repositories/google-snapshots/</google.snapshot.repo.url>
-
     <elemental2.version>1.0.0</elemental2.version>
     <gwt.version>2.9.0</gwt.version>
     <junit.version>4.12</junit.version>
@@ -62,13 +58,6 @@
       <groupId>com.google.elemental2</groupId>
       <artifactId>elemental2-dom</artifactId>
       <version>${elemental2.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.google.elemental2</groupId>
-      <artifactId>elemental2-dom</artifactId>
-      <version>${elemental2.version}</version>
-      <classifier>sources</classifier>
       <scope>test</scope>
     </dependency>
 
