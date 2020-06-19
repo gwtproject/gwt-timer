@@ -21,7 +21,6 @@
     <!-- CI -->
     <vertispan.j2cl.repo.url>https://repo.vertispan.com/j2cl/</vertispan.j2cl.repo.url>
 
-    <elemental2.version>1.0.0</elemental2.version>
     <j2cl.version>0.7-SNAPSHOT</j2cl.version>
   </properties>
 

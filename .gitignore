@@ -6,5 +6,5 @@
 .flattened-pom.xml
 
 # gwt caches and compiled units #
-war/gwt_bree/
+war/
 gwt-unitCache/
