@@ -3,5 +3,8 @@
 # See http://www.gwtproject.org/makinggwtbetter.html#global_gitignore
 
 target/
-
 .flattened-pom.xml
+
+# gwt caches and compiled units #
+war/
+gwt-unitCache/

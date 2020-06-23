@@ -44,8 +44,6 @@ To build gwt-timer:
 
 on the parent directory. This will build the artifact and run tests against the JVM, J2CL, and GWT2.
 
-**Note: To build the module you need Maven 3.6.3 or newer**
-
 ## System Requirements
 
 **GWT Timer requires GWT 2.9.0 or newer!**

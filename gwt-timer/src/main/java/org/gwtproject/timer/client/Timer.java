@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019 The GWT Authors
+ * Copyright © 2019 The GWT Project Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,8 +26,8 @@ import elemental2.dom.DomGlobal;
  *
  * <p>NOTE: If you are using a timer to schedule a UI animation, use
  * <b>org.gwtproject.animation.client.AnimationScheduler</b> or
- * <b>DomGlobal#requestAnimationFrame</b>
- * instead. The browser can optimize your animation for maximum performance.
+ * <b>DomGlobal#requestAnimationFrame</b> instead. The browser can optimize your animation for
+ * maximum performance.
  */
 public abstract class Timer {
 
