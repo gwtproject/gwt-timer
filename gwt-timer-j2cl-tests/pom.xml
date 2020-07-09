@@ -16,12 +16,12 @@
   <url>https://github.com/gwtproject/gwt-timer</url>
 
   <properties>
-    <maven.j2cl.plugin>0.15-SNAPSHOT</maven.j2cl.plugin>
+    <maven.j2cl.plugin>0.16-SNAPSHOT</maven.j2cl.plugin>
 
     <!-- CI -->
     <vertispan.j2cl.repo.url>https://repo.vertispan.com/j2cl/</vertispan.j2cl.repo.url>
 
-    <j2cl.version>0.7-SNAPSHOT</j2cl.version>
+    <j2cl.version>0.8-SNAPSHOT</j2cl.version>
   </properties>
 
   <dependencies>
